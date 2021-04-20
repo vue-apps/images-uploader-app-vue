@@ -1,9 +1,13 @@
 <template>
-  <h3>......</h3>
+  <AppHeader />
 </template>
 
 <script>
+import AppHeader from '@/components/AppHeader';
 export default {
   name: 'App',
+  components: {
+    AppHeader,
+  },
 };
 </script>
