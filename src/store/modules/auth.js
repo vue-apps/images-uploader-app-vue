@@ -15,6 +15,7 @@ const actions = {
   },
   finalizeLogin({ commit }, hash) {
     const query = qs.parse(hash.replace('#', ''));
+    console.log(query);
     commit('setToken', query.access_token);
   },
   logout: ({ commit }) => {
