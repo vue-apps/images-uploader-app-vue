@@ -2,7 +2,7 @@
   <div class="ui container secondary pointing menu">
     <a href="/" class="active item">Image Storage</a>
     <div class="right menu">
-      <a href="" class="ui item">Logout</a>
+      <a href="#" class="ui item" @click="login">Login</a>
     </div>
   </div>
 </template>

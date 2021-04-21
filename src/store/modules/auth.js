@@ -8,7 +8,7 @@ const getters = {
   isLoggedIn: (state) => !!state.token,
 };
 
-const action = {
+const actions = {
   login: () => {
     api.login();
   },
@@ -26,6 +26,6 @@ const mutations = {
 export default {
   state,
   getters,
-  action,
+  actions,
   mutations,
 };
