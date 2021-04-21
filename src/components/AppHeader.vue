@@ -2,7 +2,9 @@
   <div class="ui container secondary pointing menu">
     <a href="/" class="active item">Image Storage</a>
     <div class="right menu">
-      <div v-if="isLoggedIn">
+      <div v-if="isLoggedIn" class="horizontal">
+        <a href="#" class="ui item">Galleries</a>
+        <a href="#" class="ui item">Upload</a>
         <a href="#" class="ui item" @click="logout">Logout</a>
       </div>
       <a v-else href="#" class="ui item" @click="login">Login</a>
@@ -19,3 +21,10 @@ export default {
   methods: mapActions(['login', 'logout']),
 };
 </script>
+
+<style scoped>
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+</style>
