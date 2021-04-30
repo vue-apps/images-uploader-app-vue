@@ -1,6 +1,6 @@
 import qs from 'qs';
 import axios from 'axios';
-const CLIENT_ID = '4319c513f3f4e5c';
+const CLIENT_ID = '6fb648ba93c8000';
 const ROOT_URL = 'https://api.imgur.com';
 
 export default {
@@ -20,6 +20,7 @@ export default {
       headers: {
         Authorization: `Bearer ${token}`,
       },
+      redirect: 'follow',
     });
   },
 };
