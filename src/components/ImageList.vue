@@ -1,5 +1,5 @@
 <template>
-  <div class="ui container">
+  <div class="image-container">
     <img v-for="image in allImages" :key="image.id" :src="image.link" alt="" />
   </div>
 </template>
@@ -17,8 +17,13 @@ export default {
 </script>
 
 <style scoped>
+.image-container {
+  column-count: 3;
+  column-gap: 0;
+}
+
 img {
-  width: 200px;
-  padding: 10px;
+  max-width: 100%;
+  padding: 5px;
 }
 </style>
