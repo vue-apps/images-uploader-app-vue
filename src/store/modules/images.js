@@ -1,4 +1,5 @@
 import api from '@/api/imgur';
+import { router } from '@/main';
 
 export default {
   state: {
@@ -21,6 +22,7 @@ export default {
       // Call our API module to do the upload
       await api.upload(images, token);
       // Redirect our user to ImageList component
+      router.push('/');
     },
   },
 
