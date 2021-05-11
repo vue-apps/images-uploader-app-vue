@@ -15,8 +15,12 @@ export default {
       const response = await api.fetchImages(token);
       commit('setImages', response.data.data);
     },
-    async uploadImages(images) {
-      console.log(images);
+    async uploadImages({ rootState }, images) {
+      // Get the access token
+      const { token } = rootState.auth;
+      // Call our API module to do the upload
+      await api.upload(images, token);
+      // Redirect our user to ImageList component
     },
   },
 
